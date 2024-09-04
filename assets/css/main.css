@@ -4158,7 +4158,7 @@ input, select, textarea {
 	#testimonials {
 		padding: 4em 0; /* Plus de padding pour mieux respirer */
 		text-align: center;
-		background-color: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 50%, #1a1a1a 100%);; /* Harmonisation avec le fond de la section précédente */
+		background-color: #2E3142 /*  linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 50%, #1a1a1a 100%);; /* Harmonisation avec le fond de la section précédente */
 		color: #ffffff; /* Texte blanc pour contraster avec le fond sombre */
 	}
 	
@@ -4207,3 +4207,52 @@ input, select, textarea {
 		color: #f39c12; /* Maintien de la couleur accent */
 	}
 	
+
+
+
+
+
+
+	/* Arrière-plan du carousel */
+	.carousel-container {
+		background-color: transparent; /* Couleur de fond complémentaire */
+		padding: 20px;
+		border-radius: 10px;
+	}
+	
+	.testimonial {
+		background-color: #6C7A89; /* Couleur de fond, ici en gris clair */
+		color: #C9CCD0; /* Couleur du texte (assure-toi que le contraste est bon) */
+		padding: 15px;
+		border-radius: 10px; /* Ajoute des coins arrondis si souhaité */
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre pour plus de style */
+	}
+	
+	
+
+
+	
+	/* Ajouter des effets pour la transition du carousel */
+	.carousel-slide {
+		display: flex;
+		transition: transform 0.5s ease-in-out;
+	}
+	
+	.testimonial h4 {
+		color: #F39C12; /* Couleur complémentaire pour le nom */
+		font-weight: bold;
+	}
+	
+	.wrapper .spotlight .image {
+		max-width: 100%; /* Assure-toi que l'image prend la largeur correcte */
+		border-radius: 10px; /* Pour ajouter des coins arrondis, si souhaité */
+		display: block;
+	}
+	
+	.wrapper .spotlight .content {
+		flex: 1;
+		padding: 20px; /* Ajuster le padding si nécessaire */
+	}
+
+
+
