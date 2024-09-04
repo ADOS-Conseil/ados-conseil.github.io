@@ -276,6 +276,7 @@ input, select, textarea {
 
 	h2 {
 		font-size: 1.2em;
+		margin-top: 10px !important;
 	}
 
 	h3 {
@@ -4167,11 +4168,14 @@ input, select, textarea {
 		margin: 0 auto;
 		position: relative;
 		overflow: hidden;
+		margin-top: 0;
 	}
 	
 	.carousel-slide {
 		display: flex;
 		transition: transform 0.5s ease-in-out;
+		margin: 0;
+		padding: 0;
 	}
 	
 	.testimonial {
@@ -4208,16 +4212,15 @@ input, select, textarea {
 	}
 	
 
-
-
-
-
-
 	/* Arrière-plan du carousel */
 	.carousel-container {
 		background-color: transparent; /* Couleur de fond complémentaire */
 		padding: 20px;
 		border-radius: 10px;
+		margin-top: 0 !important; /* Forcer la marge à 0 */
+    	padding-top: 0 !important;
+		margin-bottom: 0 !important; /* Forcer la marge à 0 */
+    	padding-bottom: 0 !important;
 	}
 	
 	.testimonial {
