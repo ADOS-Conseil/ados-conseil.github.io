@@ -4224,21 +4224,27 @@ input, select, textarea {
 	}
 	
 	.testimonial {
-		background-color: #6C7A89; /* Couleur de fond, ici en gris clair */
+		background-color: #4C5C68; /* Couleur de fond, ici en gris clair */
 		color: #C9CCD0; /* Couleur du texte (assure-toi que le contraste est bon) */
 		padding: 15px;
 		border-radius: 10px; /* Ajoute des coins arrondis si souhaité */
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre pour plus de style */
-	}
+		font-style: italic;
+		text-align: center; /* Centrer le texte */
+   	 	display: flex;
+    	flex-direction: column; /* S'assurer que les éléments s'alignent en colonne */
+    	justify-content: center; /* Centrer verticalement */
+    	align-items: center; /* Centrer horizontalement */
+    	height: 100%; /* S'assurer que les éléments occupent toute la hauteur si nécessaire */
+}
 	
 	
-
-
 	
 	/* Ajouter des effets pour la transition du carousel */
 	.carousel-slide {
 		display: flex;
 		transition: transform 0.5s ease-in-out;
+		min-height: 200px;
 	}
 	
 	.testimonial h4 {

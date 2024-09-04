@@ -168,23 +168,58 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script>
+				// Script du carousel
 				const carouselSlide = document.querySelector('.carousel-slide');
 				const testimonials = document.querySelectorAll('.carousel-slide .testimonial');
 				let counter = 0;
-
+			
 				function moveCarousel() {
-    				const size = testimonials[0].clientWidth; // Utilise la largeur de la première carte pour le calcul
-   					carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-    				counter++;
-    				if (counter >= testimonials.length) {
-        				counter = 0; // Recommence depuis la première carte
-    					}
-			}
-
-setInterval(moveCarousel, 3000); // Change de témoignage toutes les 3 secondes
-
+					const size = testimonials[0].clientWidth; // Utilise la largeur de la première carte pour le calcul
+					carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+					counter++;
+					if (counter >= testimonials.length) {
+						counter = 0; // Recommence depuis la première carte
+					}
+				}
+			
+				setInterval(moveCarousel, 3000); // Change de témoignage toutes les 3 secondes
+			
+			</script>
+			<script>
+				// Script pour ajuster la hauteur des slides
+				window.onload = function() {
+					function setEqualHeights() {
+						let slides = document.querySelectorAll('.carousel-slide .testimonial');
+						let maxHeight = 0;
+			
+						// Réinitialiser les hauteurs pour recalculer correctement
+						slides.forEach(slide => {
+							slide.style.height = 'auto';
+						});
+			
+						// Trouver la hauteur maximale de tous les slides
+						slides.forEach(slide => {
+							let height = slide.getBoundingClientRect().height;
+							if (height > maxHeight) {
+								maxHeight = height;
+							}
+						});
+			
+						// Appliquer la hauteur maximale trouvée à tous les slides
+						slides.forEach(slide => {
+							slide.style.height = maxHeight + 'px';
+						});
+					}
+			
+					// Appliquer la hauteur égale après le chargement
+					setEqualHeights();
+			
+					// Appliquer à nouveau lors du redimensionnement de la fenêtre
+					window.addEventListener('resize', setEqualHeights);
+				};
 			</script>
 			
+				
 
 	</body>
 </html>
