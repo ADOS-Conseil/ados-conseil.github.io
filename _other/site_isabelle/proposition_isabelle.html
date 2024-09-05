@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Massage ayurvédique à Paris - Bien-être et harmonie grâce à l'Ayurvéda.">
+    <title>Massage Ayurvédique à Paris</title>
+    <style>
+        /* Typographie et base */
+        body {
+            font-family: 'Georgia', serif;
+            color: #4a4a4a;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #fdfdfb;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header, footer {
+            background-color: #f7f4ef;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header .logo {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav ul li a {
+            color: #8c6b58;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('path-to-your-image.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            background-color: #8c6b58;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f2d3ac;
+            color: #4a4a4a;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .btn:hover {
+            background-color: #e5c097;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 0;
+        }
+
+        .about, .services, .tarifs, .testimonials, .contact {
+            background-color: #f7f4ef;
+            padding: 60px 0;
+            margin-bottom: 0;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #8c6b58;
+        }
+
+        .about p, .services p, .tarifs p, .testimonials p, .contact p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #4a4a4a;
+        }
+
+        .services ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .services ul li {
+            width: 48%;
+            margin-bottom: 20px;
+        }
+
+        .services ul li h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #8c6b58;
+        }
+
+        .tarifs ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .tarifs ul li {
+            margin-bottom: 20px;
+        }
+
+        .tarifs ul li h4 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #8c6b58;
+        }
+
+        /* Carousel Styles */
+        .testimonials {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .testimonial-item {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .testimonial-item blockquote {
+            border-left: 5px solid #8c6b58;
+            margin: 20px 0;
+            padding-left: 20px;
+            font-style: italic;
+            color: #4a4a4a;
+        }
+
+        .contact form label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #4a4a4a;
+        }
+
+        .contact form input, .contact form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #4a4a4a;
+            background-color: #fff;
+        }
+
+        .contact form button {
+            padding: 10px 20px;
+            background-color: #8c6b58;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .contact form button:hover {
+            background-color: #7a584a;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="images/lotus-logo.png" alt="Logo Lotus" width="60" height="60">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#about">À Propos</a></li>
+                    <li><a href="#services">Massages</a></li>
+                    <li><a href="#tarifs">Tarifs</a></li>
+                    <li><a href="#testimonials">Témoignages</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>Isabelle Massage</h1>
+                <p>Praticienne ayurvédique</p>
+                <!--<a href="#services" class="btn">Nos Massages</a>-->
+                <blockquote>
+                    "QUE DU BONHEUR !"
+                </blockquote>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <p><strong>Découvrez l'harmonie intérieure grâce aux massages ayurvédiques traditionnels.</strong> </p>
+                <p>Isabelle, praticienne ayurvédique spécialisée dans le massage détente, travaille sur des problématiques telles que la fatigue, l'épuisement, la somatisation, l'hypersensibilité, et le poids émotionnel.</p>
+                <p>Elle oriente également ses clients vers des médecins spécialisés si nécessaire.</p>
+            </div>
+        </section>
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Les Massages</h2>
+                <ul>
+                    <li>
+                        <h3>Abhyanga</h3>
+                        <p>Un massage à l'huile chaude pour détendre et revitaliser tout le corps. Il améliore la circulation, élimine les toxines, et vous laisse une sensation de profonde détente.</p>
+                    </li>
+                    <li>
+                        <h3>Shirodhara</h3>
+                        <p>Un traitement apaisant où un filet d'huile tiède est versé sur le front. Cette technique est idéale pour calmer le mental, réduire le stress et améliorer la concentration.</p>
+                    </li>
+                    <li>
+                        <h3>Pinda Swedana</h3>
+                        <p>Un massage aux pochons d'herbes médicinales chauffés, parfait pour soulager les douleurs musculaires, stimuler la circulation et favoriser la détoxification.</p>
+                    </li>
+                    <li>
+                        <h3>Udvarthana</h3>
+                        <p>Un massage exfoliant à base de poudres d'herbes, qui tonifie la peau, réduit la cellulite et favorise la perte de poids.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="tarifs" class="tarifs">
+            <div class="container">
+                <h2>Tarifs</h2>
+                <ul>
+                    <li>
+                        <h4>Abhyanga</h4>
+                        <p>60 minutes : 70€</p>
+                        <p>90 minutes : 90€</p>
+                    </li>
+                    <li>
+                        <h4>Shirodhara</h4>
+                        <p>60 minutes : 80€</p>
+                    </li>
+                    <li>
+                        <h4>Pinda Swedana</h4>
+                        <p>60 minutes : 85€</p>
+                    </li>
+                    <li>
+                        <h4>Udvarthana</h4>
+                        <p>60 minutes : 75€</p>
+                    </li>
+                    <li>
+                        <h4>Forfait Bien-Être</h4>
+                        <p>5 séances (60 minutes chacune) : 320€</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Carousel des Témoignages -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2>Témoignages</h2>
+                <div class="carousel">
+                    <div class="testimonial-item">
+                        <blockquote>
+                            <p>"Une expérience incroyable, un vrai moment de détente et de reconnexion. Le massage Abhyanga m'a vraiment ressourcé."</p>
+                            <footer>— Marie, Paris</footer>
+                        </blockquote>
+                    </div>
+                    <div class="testimonial-item">
+                        <blockquote>
+                            <p>"Le Shirodhara a totalement apaisé mon esprit. C'était une expérience unique et je recommande vivement."</p>
+                            <footer>— Julien, Paris</footer>
+                        </blockquote>
+                    </div>
+                    <div class="testimonial-item">
+                        <blockquote>
+                            <p>"Un service parfait et un accueil chaleureux. Isabelle est vraiment à l'écoute."</p>
+                            <footer>— Sophie, Paris</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contactez-nous</h2>
+                <p>Nous sommes là pour répondre à toutes vos questions ou pour réserver votre séance de massage. Contactez-nous via le formulaire ci-dessous ou directement :</p>
+                <ul>
+                    <li><strong>Email :</strong> isabelle@mail.fr</li>
+                    <li><strong>Téléphone :</strong> 06 XX XX XX XX</li>
+                    <li><strong>Instagram :</strong> @isabelle</li>
+                </ul>
+                <form action="https://formspree.io/f/votre-email" method="POST">
+                    <label for="name">Nom</label>
+                    <input type="text" name="name" id="name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" required></textarea>
+
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Isabelle Massage - Ayurvéda. Tous droits réservés.</p>
+            <p><a href="https://www.instagram.com/isabelleholistique">Instagram</a> | <a href="mailto:isabelle_hed@yahoo.fr">Email</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Carousel Script (Auto-play only)
+        const carousel = document.querySelector('.carousel');
+        let index = 0;
+
+        function showTestimonial(n) {
+            const totalItems = document.querySelectorAll('.testimonial-item').length;
+            index = (n + totalItems) % totalItems; // To loop around
+            carousel.style.transform = `translateX(${-index * 100}%)`;
+        }
+
+        // Auto-play
+        setInterval(() => {
+            showTestimonial(index + 1);
+        }, 5000); // Change every 5 seconds
+    </script>
+</body>
+</html>
+s
