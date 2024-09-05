@@ -4156,112 +4156,125 @@ input, select, textarea {
 
 	}  
 
-	#testimonials {
-		padding: 4em 0; /* Plus de padding pour mieux respirer */
-		text-align: center;
-		background-color: #2E3142 /*  linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 50%, #1a1a1a 100%);; /* Harmonisation avec le fond de la section précédente */
-		color: #ffffff; /* Texte blanc pour contraster avec le fond sombre */
-	}
-	
-	.carousel-container {
-		max-width: 1000px; /* Augmenter la largeur pour mieux s'intégrer dans la page */
-		margin: 0 auto;
-		position: relative;
-		overflow: hidden;
-		margin-top: 0;
-	}
-	
-	.carousel-slide {
-		display: flex;
-		transition: transform 0.5s ease-in-out;
-		margin: 0;
-		padding: 0;
-	}
-	
-	.testimonial {
-		min-width: 100%;
-		box-sizing: border-box;
-		padding: 30px;
-		background: #2E3142; /* Couleur de fond plus claire pour s'harmoniser avec le reste */
-		box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Ombre subtile pour créer de la profondeur */
-		border-radius: 8px; /* Angle des coins cohérent avec les autres sections */
-		margin: 20px 0;
-	}
-	
-	.testimonial h4 {
-		margin-top: 15px;
-		font-style: normal; /* Aligné avec les titres sur le reste du site */
-		color: #f39c12; /* Utilisation d'une couleur accent pour le nom du client */
-		font-size: 1.2em; /* Taille cohérente avec les autres titres */
-		text-align: center;
-		text-transform: none;
-		font-weight: 550; /* Légère augmentation du poids pour une meilleure lisibilité */
-	}
-	
-	.testimonial p {
-		font-style: normal; /* Retrait de l'italique pour s'harmoniser avec le reste du texte */
-		font-size: 1.1em;
-		color: #cccccc; /* Texte plus clair pour un bon contraste sur le fond */
-		margin-bottom: 15px;
-		line-height: 1.6; /* Espacement des lignes pour améliorer la lisibilité */
-	}
-	
-	.testimonial::before, .testimonial::after {
-		font-size: 2em; /* Réduction de la taille des guillemets pour qu'ils ne dominent pas le texte */
-		color: #f39c12; /* Maintien de la couleur accent */
-	}
-	
 
-	/* Arrière-plan du carousel */
-	.carousel-container {
-		background-color: transparent; /* Couleur de fond complémentaire */
-		padding: 20px;
-		border-radius: 10px;
-		margin-top: 0 !important; /* Forcer la marge à 0 */
-    	padding-top: 0 !important;
-		margin-bottom: 0 !important; /* Forcer la marge à 0 */
-    	padding-bottom: 0 !important;
-	}
-	
-	.testimonial {
-		background-color: #4C5C68; /* Couleur de fond, ici en gris clair */
-		color: #C9CCD0; /* Couleur du texte (assure-toi que le contraste est bon) */
-		padding: 15px;
-		border-radius: 10px; /* Ajoute des coins arrondis si souhaité */
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre pour plus de style */
-		font-style: italic;
-		text-align: center; /* Centrer le texte */
-   	 	display: flex;
-    	flex-direction: column; /* S'assurer que les éléments s'alignent en colonne */
-    	justify-content: center; /* Centrer verticalement */
-    	align-items: center; /* Centrer horizontalement */
-    	height: 100%; /* S'assurer que les éléments occupent toute la hauteur si nécessaire */
+#testimonials {
+    padding: 4em 0; /* Plus de padding pour mieux respirer */
+    text-align: center;
+    background-color: #2E3142; /* Harmonisation avec le fond de la section précédente */
+    color: #ffffff; /* Texte blanc pour contraster avec le fond sombre */
 }
-	
-	
-	
-	/* Ajouter des effets pour la transition du carousel */
-	.carousel-slide {
-		display: flex;
-		transition: transform 0.5s ease-in-out;
-		min-height: 200px;
-	}
-	
-	.testimonial h4 {
-		color: #F39C12; /* Couleur complémentaire pour le nom */
-		font-weight: bold;
-	}
-	
-	.wrapper .spotlight .image {
-		max-width: 100%; /* Assure-toi que l'image prend la largeur correcte */
-		border-radius: 10px; /* Pour ajouter des coins arrondis, si souhaité */
-		display: block;
-	}
-	
-	.wrapper .spotlight .content {
-		flex: 1;
-		padding: 20px; /* Ajuster le padding si nécessaire */
-	}
+
+/* Conteneur du carousel */
+.carousel-container {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 0 !important; /* Forcer la marge à 0 en haut */
+    margin-bottom: 0 !important; /* Forcer la marge à 0 en bas */
+    margin: 0 auto; /* Centre le carousel horizontalement */
+    position: relative;
+    max-width: 1000px; /* Largeur maximale du carousel */
+    overflow: hidden; /* Cache les extrémités des témoignages voisins */
+}
+
+/* Slide du carousel */
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Chaque slide occupe 100% du conteneur */
+    padding: 0;
+    min-height: 200px;
+	margin: 0;
+}
+
+/* Témoignage individuel */
+.testimonial {
+	flex: 0 0 100%; /* Chaque témoignage prend exactement 100% de la largeur du carousel */
+    box-sizing: border-box;
+    padding: 30px;
+    background: #4C5C68; /* Couleur de fond, ici en gris clair */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile pour créer de la profondeur */
+    border-radius: 10px; /* Coins arrondis */
+    margin: 0; /* Supprime les marges entre les témoignages */
+    text-align: center; /* Centrer tout le texte */
+    display: flex;
+    flex-direction: column; /* S'assurer que les éléments s'alignent en colonne */
+    justify-content: center; /* Centrer verticalement */
+    align-items: center; /* Centrer horizontalement */
+    height: 100%; /* Assure que les éléments occupent toute la hauteur si nécessaire */
+}
+
+/* Style pour le texte du témoignage */
+.testimonial h4 {
+    margin-top: 15px;
+    font-style: normal; /* Aligné avec les titres sur le reste du site */
+    color: #F39C12; /* Utilisation d'une couleur accent pour le nom du client */
+    font-size: 1.0em; /* Taille cohérente avec les autres titres */
+    text-align: center;
+    text-transform: none;
+    font-weight: 550; /* Légère augmentation du poids pour une meilleure lisibilité */
+}
+
+/* Texte principal du témoignage */
+.testimonial p {
+    font-style: normal; /* Retrait de l'italique pour s'harmoniser avec le reste du texte */
+    font-size: 1.1em;
+    color: #cccccc; /* Texte plus clair pour un bon contraste sur le fond */
+    margin-bottom: 15px;
+    line-height: 1.6; /* Espacement des lignes pour améliorer la lisibilité */
+}
+
+/* Guillemets stylisés autour du texte */
+.testimonial::before, .testimonial::after {
+    font-size: 2em; /* Taille des guillemets */
+    color: #F39C12; /* Couleur accent */
+}
+
+/* Image dans la section spotlight */
+.wrapper .spotlight .image {
+    max-width: 100%; /* Assure-toi que l'image prend la largeur correcte */
+    border-radius: 10px; /* Pour ajouter des coins arrondis, si souhaité */
+    display: block;
+}
+
+/* Contenu de la section spotlight */
+.wrapper .spotlight .content {
+    flex: 1;
+    padding: 20px; /* Ajuster le padding si nécessaire */
+}
 
 
 
+
+/* conteneur pour prévisualiser des sites internet */
+
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Cela définit le ratio d'aspect à 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+
+@media (max-width: 768px) {
+    .responsive-iframe {
+        min-height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .responsive-iframe {
+        min-height: 100px;
+    }
+}

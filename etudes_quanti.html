@@ -53,8 +53,19 @@
 									<h2>Prestations</h2>
 									<p>A partir d'un tableau de données, je vous fournirai les valeurs et les figures  utiles pour votre recherche. Je réaliserai des statistiques descriptives mono et multivariées ainsi que des tests statistiques afin d'extraire un maximum d'informations. </p>
 									<p>Je peux aussi bien travailler avec des données numériques que catégorielles, et je maîtrise les dernières méthodes de Machine Learning interprétables. Vous bénéficierez ainsi d'une analyse de pointe.</p>
-
-								</div>
+									<h2>Témoignages</h2>
+										<div class="carousel-container" >
+											<div class="carousel-slide">
+												<div class="testimonial">
+													<p>"Une analyse détaillée avec un statististicien sympa, flexible et à l'écoute, qui s'est adapté à mes (multiples) demandes ! Je recommande 👍"</p>
+													<h4>Angéline Rancy, allergologue</h4>
+												</div>
+												<div class="testimonial">
+													<p>"XXXXXX"</p>
+													<h4>Client 2</h4>
+												</div>
+											</div>
+										</div>
 								<div class="inner">
 									<section>
 										<h2>Tarifs</h2>
@@ -109,7 +120,7 @@
 									<li class="icon brands fa-linkedin"><a href="#">https://www.linkedin.com/in/yanis-bendjelal/</a></li>
 								</ul>
 								<ul class="copyright">
-									<li>&copy; ADOS Conseil, Yanis Bendjelal, 2024</li><li><a href="#">bendjelal.yanis@gmail.com</a></li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>Pictures: Unsplash</a></li>
+									<li>&copy; ADOS Conseil, Yanis Bendjelal, 2024</li><li><a href="#">bendjelal.yanis@gmail.com</a></li><li>Pictures: Unsplash</a></li>
 								</ul>
 							</div>
 						</section>
@@ -117,12 +128,77 @@
 					</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
-	</body>
+	</div>
+
+
+
+
+
+	<script>
+		const carouselSlide = document.querySelector('.carousel-slide');
+		const testimonials = document.querySelectorAll('.carousel-slide .testimonial');
+		let counter = 0;
+
+		function moveCarousel() {
+			const size = testimonials[0].clientWidth; // Utilise la largeur de la première carte pour le calcul
+			   carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+			counter++;
+			if (counter >= testimonials.length) {
+				counter = 0; // Recommence depuis la première carte
+				}
+	}
+
+setInterval(moveCarousel, 3000); // Change de témoignage toutes les 3 secondes
+
+	</script>
+
+	<script>
+		window.onload = function() {
+function setEqualHeights() {
+	let slides = document.querySelectorAll('.carousel-slide .testimonial');
+	let maxHeight = 0;
+
+	// Réinitialiser les hauteurs pour recalculer correctement
+	slides.forEach(slide => {
+		slide.style.height = 'auto';
+	});
+
+	// Trouver la hauteur maximale de tous les slides
+	slides.forEach(slide => {
+		let height = slide.getBoundingClientRect().height;
+		if (height > maxHeight) {
+			maxHeight = height;
+		}
+	});
+
+	// Appliquer la hauteur maximale trouvée à tous les slides
+	slides.forEach(slide => {
+		slide.style.height = maxHeight + 'px';
+	});
+}
+
+// Appliquer la hauteur égale après le chargement
+setEqualHeights();
+
+// Appliquer à nouveau lors du redimensionnement de la fenêtre
+window.addEventListener('resize', setEqualHeights);
+
+// Recalculer les hauteurs lorsque les images sont complètement chargées
+let images = document.querySelectorAll('.carousel-slide .testimonial img');
+images.forEach(img => {
+	img.onload = setEqualHeights;
+});
+};
+
+	</script>
+
+
+</body>
 </html>
