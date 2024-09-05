@@ -4278,3 +4278,19 @@ input, select, textarea {
         min-height: 100px;
     }
 }
+
+
+
+/* centrer le copyright */
+
+.copyright {
+    display: flex;
+    justify-content: center; /* Centre le contenu horizontalement */
+    list-style: none; /* Retire les puces de la liste */
+    padding: 0; /* Supprime le padding par défaut */
+    margin: 0; /* Supprime les marges par défaut */
+}
+
+.copyright li {
+    margin: 0 10px; /* Espace entre les éléments de la liste */
+}
