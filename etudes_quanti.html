@@ -67,8 +67,16 @@
 											</div>
 										</div>
 								<div class="inner">
+
+
+
+
+
+
 									<section>
 										<h2>Tarifs</h2>
+									
+										<!-- Statistiques études cliniques -->
 										<div class="table-wrapper">
 											<table class="alt">
 												<thead>
@@ -80,6 +88,9 @@
 												</thead>
 												<tbody>
 													<tr>
+														<td colspan="3">Études cliniques</td>
+													</tr>
+													<tr>
 														<td>Forfait "Statistiques"</td>
 														<td>Réalisation des statistiques d'un projet. Du tableau de données aux figures finales.</td>
 														<td>200</td>
@@ -89,11 +100,35 @@
 														<td>Accompagnement total pour les statistiques d'une thèse de médecine. De la collecte des données aux figures finales.</td>
 														<td>250</td>
 													</tr>
-									
+												</tbody>
+											</table>
+										</div>
+										<div class="table-wrapper">
+											<table class="alt">
+												<thead>
+												</thead>
+												<tbody>
 													<tr>
-														<td></td>
-														<td> </td>
-														<td></td>
+														<td colspan="3">Études fondamentales</td>
+													</tr>
+													<tr>
+														<td>RNA-Seq Preprocessing</td>
+														<td>Des données brutes fastq aux tableaux de comptes. <br> Prix pour 5 échantillons.</td>
+														<td>250</td>
+													</tr>
+													<tr>
+														<td>RNA-Seq Processing</td>
+														<td>Des tableaux de comptes aux figures finales.</td>
+														<td>250</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="table-wrapper">
+											<table class="alt">
+												<tbody>
+													<tr>
+														<td colspan="3">Publication</td>
 													</tr>
 													<tr>
 														<td>Supplément Publication</td>
@@ -103,9 +138,7 @@
 												</tbody>
 											</table>
 										</div>
-									</section>
-								</div>
-							</div>
+									</section>									
 
 					</section>
 
@@ -126,6 +159,7 @@
 						</section>
 		
 					</div>
+
 
 		<!-- Scripts -->
 		<script src="assets/js/jquery.min.js"></script>
@@ -199,6 +233,25 @@ images.forEach(img => {
 
 	</script>
 
-
 </body>
+
+<style>
+	/* Appliquer des largeurs fixes ou proportionnelles pour chaque colonne */
+	.table-wrapper table.alt th:nth-child(1),
+	.table-wrapper table.alt td:nth-child(1) {
+		width: 20%; /* Largeur pour la première colonne (par exemple 20%) */
+	}
+
+	.table-wrapper table.alt th:nth-child(2),
+	.table-wrapper table.alt td:nth-child(2) {
+		width: 60%; /* Largeur pour la deuxième colonne (par exemple 60%) */
+	}
+
+	.table-wrapper table.alt th:nth-child(3),
+	.table-wrapper table.alt td:nth-child(3) {
+		width: 20%; /* Largeur pour la troisième colonne (par exemple 20%) */
+	}
+</style>
+
+
 </html>
