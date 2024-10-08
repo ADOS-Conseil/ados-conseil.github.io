@@ -60,23 +60,23 @@
 									<p>Je peux aussi bien travailler avec des données numériques que catégorielles, et je maîtrise les dernières méthodes de Machine Learning interprétables. Vous bénéficierez ainsi d'une analyse de pointe.</p>
 									<p>Je répondrai rapidement à vos demandes, je vous tiendrai informé en temps réel de mon avancée, et je resterai à votre disposition pour toute question ou modification.</p>
 								<h2>Témoignages</h2>
-										<div class="carousel-container" >
-											<div class="carousel-slide">
-												<div class="testimonial">
-													<p>"Une analyse détaillée avec un statististicien sympa, flexible et à l'écoute, qui s'est adapté à mes (multiples) demandes !  <br>Je recommande 👍"</p>
-													<h4>Angéline Rancy, allergologue</h4>
-												</div>
-												<div class="testimonial">
-													<p>"Je remercie beaucoup Yanis pour son travail de grande qualité. J’ai pu agrémenter mon mémoire de plusieurs figures , visuellement très parlantes, qui ont permis de rendre mes résultats compréhensibles.
-														Yanis a été très réactif et a su répondre à mes multiples demandes et interrogations. Merci encore !"
-														</p>
-													<h4>Nassira Yahia, médecin généraliste</h4>
-												</div>
-											</div>
+									<div class="carousel-container">
+										<div class="carousel-slide">
+										  <div class="testimonial">
+											<p>"Une analyse détaillée avec un statisticien sympa, flexible et à l'écoute, qui s'est adapté à mes (multiples) demandes ! <br>Je recommande 👍"</p>
+											<h4>Angéline Rancy, allergologue</h4>
+										  </div>
+										  <div class="testimonial">
+											<p>"Je remercie beaucoup Yanis pour son travail de grande qualité. J’ai pu agrémenter mon mémoire de plusieurs figures, visuellement très parlantes, qui ont permis de rendre mes résultats compréhensibles. Yanis a été très réactif et a su répondre à mes multiples demandes et interrogations. Merci encore !"</p>
+											<h4>Nassira Yahia, médecin généraliste</h4>
+										  </div>
+										  <div class="testimonial">
+											<p>"Yanis a été d'une aide inestimable pour le data management et l'analyse statistique de ma thèse. Grâce à ses compétences et à sa réactivité, j'ai pu finaliser mon travail dans les délais impartis. Son aide a vraiment fait la différence et m'a permis de mener à bien mon projet. Je recommande vivement ses services."</p>
+											<h4>Ilias Chafik, urgentiste</h4>
+										  </div>
 										</div>
+								  	</div>
 								<div class="inner">
-
-
 									<section>
 										<h2>Tarifs</h2>
 									
@@ -201,7 +201,7 @@
 
 setInterval(moveCarousel, 3000); // Change de témoignage toutes les 3 secondes
 
-	</script>
+	</script>  
 
 	<script>
 		window.onload = function() {
@@ -242,6 +242,35 @@ images.forEach(img => {
 };
 
 	</script>
+
+
+<script>
+	// Fonction pour mélanger un tableau (array)
+	function shuffle(array) {
+	  for (let i = array.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[array[i], array[j]] = [array[j], array[i]];
+	  }
+	  return array;
+	}
+  
+	// Sélectionne les témoignages
+	const carouselSlide = document.querySelector('.carousel-slide');
+	const testimonials = Array.from(carouselSlide.children);
+  
+	// Mélange les témoignages
+	const shuffledTestimonials = shuffle(testimonials);
+  
+	// Réinsère les témoignages mélangés dans le carrousel
+	carouselSlide.innerHTML = '';  // Efface tous les témoignages existants
+	shuffledTestimonials.forEach((testimonial) => {
+	  carouselSlide.appendChild(testimonial);  // Réinsère chaque témoignage mélangé
+	});
+  </script>
+  
+
+
+
 
 </body>
 
